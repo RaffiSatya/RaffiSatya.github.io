@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bilangan Fibonacci - Raffi Satya Nugraha</title>
+</head>
+<body>
+    <h1 style="color:blue">Bilangan Fibonacci</h1>
+	<h5 style="color:green">Raffi Satya Nugraha (21/473263/TK/52148)</h5>
+	<hr>
+    <p>Masukkan sebuah angka:</p>
+
+    <label for="inputAngka">Angka :</label>
+    <input type="number" id="inputAngka">
+    <br>
+	<br>
+    <button onclick="bilanganFibonacci()">Tampilkan Bilangan Fibonacci</button>
+    
+    <p id="hasil"></p>
+	<br>
+    <br>
+    <br>
+
+    <script>
+        function bilanganFibonacci() {
+            const inputAngkaElement = document.getElementById("inputAngka");
+            const hasilElement = document.getElementById("hasil");
+            
+            const angka = parseInt(inputAngkaElement.value);
+
+            hasilElement.textContent = ""; 
+
+            if (isNaN(angka) || angka <= 0) {
+                hasilElement.textContent = "Masukkan angka positif dan >0!";
+                return;
+            }
+
+            
+            function generateFibonacci(n) {
+                const fibonacci = [1, 1];
+                for (let i = 2; i < n; i++) {
+                    fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+                }
+                return fibonacci;
+            }
+
+            const fibonacciNumbers = generateFibonacci(angka);
+            hasilElement.textContent = `Bilangan Fibonacci dari 1 sampai ${angka}: ${fibonacciNumbers.join(', ')}`;
+        }
+    </script>
+</body>
+</html>

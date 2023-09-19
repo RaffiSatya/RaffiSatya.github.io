@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validasi Input - Raffi Satya Nugraha</title>
+</head>
+<body>
+    <h1 style="color:blue">Validasi Input</h1>
+	<h5 style="color:green">Raffi Satya Nugraha (21/473263/TK/52148)</h5>
+    <hr>
+    <h3>Masukkan nama, password, dan alamat email anda</h3>
+
+    <label for="nama">Masukkan Nama:</label>
+    <input type="text" id="nama">
+    <br>
+    <br>
+    <label for="email">Masukkan Email:</label>
+    <input type="email" id="email">
+    <br>
+    <br>
+    <label for="password">Masukkan Sandi:</label>
+    <input type="password" id="password">
+    <br>
+    <br>
+    <button onclick="checkPassword()">Masuk</button>
+    <h3 align="center"> Pesan :  </h3> 
+    <p id="error" align="center"></p>
+    <br>
+    <br>
+    <br>
+
+    <script>
+        function checkPassword() {
+            const namaElement = document.getElementById("nama");
+            const emailElement = document.getElementById("email");
+            const passwordElement = document.getElementById("password");
+            const errorElement = document.getElementById("error");
+
+            const nama = namaElement.value;
+            const email = emailElement.value;
+            const password = passwordElement.value;
+
+            if (nama === "Raffi" && email === "raffi.satya.nugraha@mail.ugm.ac.id" && password === "sss") {
+                errorElement.textContent = "Sandi Benar. Halo Raffi :)"; 
+                alert("Sandi Benar. Halo Raffi :)")
+                 
+            } else {
+                errorElement.textContent = "Sandi salah. Anda Bukan Raffi!";
+                alert("Sandi salah. Anda Bukan Raffi!")
+            }
+        }
+    </script>
+</body>
+</html>

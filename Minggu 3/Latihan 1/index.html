@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Factorial Calculator</h2>
+
+<input id="datainput"/>
+<button onclick="calculateFactorial()">Calculate</button>
+<p id="demo">Result will be shown here</p>
+
+<script>
+    function faktorial(n) {
+        if (n === 0) {
+            return 1;
+        }
+        return n * faktorial(n - 1);
+    }
+    
+    function calculateFactorial() {
+        var inputValue = parseInt(document.getElementById("datainput").value);
+        var result = faktorial(inputValue);
+        document.getElementById("demo").innerHTML = "Factorial of " + inputValue + " is: " + result;
+    }
+</script>
+</body>
+</html>

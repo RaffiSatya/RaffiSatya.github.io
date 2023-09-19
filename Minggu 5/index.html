@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Lokasi yang berkesan di Yogyakarta </title>
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+   integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+   integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+   crossorigin=""></script>
+ 
+ <style>
+    html, body, section
+    {
+        position: relative;
+        height: 100%;
+        background-image: url('https://i.pinimg.com/564x/cd/43/a1/cd43a1f5ab422725b46cf89bc4e88670.jpg');
+    }
+
+    html
+    {
+        scroll-behavior: smooth;
+    }
+
+    h1{
+
+    }
+
+    #map {
+    width: 1000px;
+    height: 500px;
+    margin-top: 100px;
+    } 
+ </style>
+
+</head>
+
+<body>
+    <center><h1 style="font-family:verdana; color: white">Restoran Fast Food Sekitar UGM</h1></center>
+    <center>
+        <div id="map"></div>
+    </center>
+
+     <script>
+        var map = L.map('map',{
+        center: [-7.764038654325745, 110.3831644682195],
+        zoom: 15
+        });
+
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            maxZoom: 25, 
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        })
+             .addTo(map);
+        
+        L.marker([-7.76157, 110.38015])
+            .bindPopup('<center><img src="https://akcdn.detik.net.id/visual/2016/06/03/5ce09e28-a2ad-443d-8285-313ad0aec41f_169.jpg?w=650" width="300px" height="200px" title="Dunkin Donuts" alt="Dunkin Donuts"></center><h1>Dunkin Donuts</h1><p>Dunkin Donuts adalah restoran dan waralaba makanan internasional yang mengkhususkan dalam donat. Perusahaan ini didirikan pada tahun 1950 oleh William Rosenberg di Quincy, Massachusetts. Dunkin Donuts sekarang ini merupakan restoran donat terbesar di dunia, dengan hampir 7.000 restoran, kios pengantaran-ambil ke luar di lebih dari 35 negara.</p>')
+            .addTo(map)
+        L.marker([-7.76156, 110.38055])
+            .bindPopup('<center><img src="https://assets.ayobandung.com/crop/0x0:0x0/750x500/webp/photo/2022/09/10/909323133.jpeg" width="300px" height="200px" title="W alt="Yoshinoya"></center><h1>Yoshinoya</h1><p>Yoshinoya adalah jaringan rumah makan waralaba gyudon terbesar di Jepang. Slogan Yoshinoya adalah "Enak, murah, cepat" yang mencerminkan pentingnya pelanggan, layanan secara pribadi, dan kualitas.</p>')
+            .addTo(map)
+        L.marker([-7.75770, 110.38159])
+            .bindPopup('<center><img src="https://i0.wp.com/harga.web.id/wp-content/uploads/menu-hokben.jpg?resize=680%2C300&ssl=1" width="300px" height="200px" title="HokBen" alt="HokBen"></center><h1>HokBen</h1><p>HokBen (awalnya merupakan kepanjangan dari Hoka Hoka Bento) adalah jaringan restoran makanan cepat saji yang menyajikan makanan bergaya Jepang yang berbasis di Jakarta, Indonesia. Hingga kini, HokBen memiliki 170 gerai (per akhir Januari 2020) yang tersebar di pulau Jawa, Bali dan Sumatera.</p>')
+            .addTo(map)
+        L.marker([-7.75636,110.38230])
+            .bindPopup('<center><img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/indizone/2022/05/20/d5soAEY/menu-pizza-hut-terbaru-2022-dan-harganya-wajib-dicoba79.jpg" width="300px" height="200px" title="Pizza Hut" alt="Pizza Hut"></center><h1>Pizza Hut</h1><p>Pizza Hut adalah rantai restoran Amerika dan waralaba internasional yang didirikan pada tahun 1958 di Wichita, Kansas oleh Dan dan Frank Carney. Perusahaan ini dikenal dengan menu masakan Italia-Amerika, termasuk pizza dan pasta, serta lauk dan makanan penutup.</p>')
+            .addTo(map)
+        L.marker([-7.76249, 110.37962])
+            .bindPopup('<center><img src="https://berita.99.co/wp-content/uploads/2023/04/shutterstock_1684587115-1.jpg" width="300px" height="200px" title="McDonalds" alt="McDonalds"></center><h1>McDonalds</h1><p>McDonalds merupakan restoran fast food terbesar di dunia yang diawali pada tahun 1955 di California, Amerika Serikat. Dengan produk unggulan berupa Burger bernama BigMac, McDonalds hingga saat ini telah memiliki ribuan restoran yang tersebar di lebih dari 100 negara, salah satunya Indonesia.</p>')
+            .addTo(map)
+    </script>
+
+
+</body>
+</html>
