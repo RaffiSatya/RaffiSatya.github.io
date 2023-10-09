@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ujian Tengah Semester</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+    <script src="jogja.js"></script>
+    <script src="bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="Leaflet.GraphicScale.min.css" />
+    <script src="Leaflet.GraphicScale.min.js"></script>
+    <!--Measure Tools-->
+    <script src="leaflet-measure.js"></script>
+
+    <!-- Leaflet Control Geocoder -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.js"></script>
+
+    <style>
+      html,
+      body,
+      section {
+        position: relative;
+        height: 100%;
+        background-image: url("");
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      h1 {
+      }
+
+      #map {
+        width: 1520px;
+        height: 400px;
+        margin-top: 93px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #073C64">
+        <div class="container" style = "margin-left: 10px">
+          <a class="navbar-brand" href="#">
+            <img src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg" alt="Github" width="30" height="30" />
+          </a>
+          <a class="navbar-brand" href="https://github.com/RaffiSatya" style = "font-size: 20px;">Raffi Satya Nugraha</a>
+          <h1 class="navbar-brand data-bs-toggle" href="" style = "margin-left: 230px; font-size: 40px;">Praktikum SIGWEB UTS</h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="https://geodesi.ugm.ac.id/"style = "margin-left : 400px">TGD UGM <span class="sr-only"> </span></a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <button class="btn btn-outline-success my-2 my-sm-0" style = color:aliceblue>My Location</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <h2 style = 'margin-top: 93px; color:#e6ac27'>Essay Praktikum SIG WEB</h2>
+    <hr>
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
+    <table style="width:20%">
+    <tr>
+      <th>Nama</th>
+      <th>NIM</th>
+    </tr>
+    <tr>
+      <td>Raffi Satya Nugraha</td>
+      <td>21/473263/TK/52148</td>
+    </tr>
+    </table>
+    <hr>
+    <h3 style="color:#073C64">Minggu 1 dan 2: HTML</h3>
+    <p style="color:grey"><b>HTML</b> adalah singkatan dari <i>Hypertext Markup Language</i>, yaitu bahasa markup standar untuk membuat dan menyusun halaman dan aplikasi web. dengan HTML, kita dapat membuat konten website sederhana yang berisi tulisan, gambar, tabel, dan lain sebagainya</p>
+    <h3 style="color:#073C64">Minggu 3: CSS dan Javascript</h3>
+    <p style="color:grey"><b>CSS</b> merupakan bahasa yang digunakan untuk mengatur tampilan elemen yang tertulis dalam bahasa markup, seperti HTML. CSS berfungsi untuk memisahkan konten dari tampilan visualnya di situs. Sedangkan <b>Javascript</b> adalah bahasa pemrograman yang digunakan untuk membuat halaman web yang interaktif. Dengan Javascript, dapat dibuat sebuah fungsi dan program yang ingin digunakan.</p>
+    <h3 style="color:#073C64">Minggu 4: Bootsrap</h3>
+    <p style="color:grey"><b>Bootstrap</b>merupakan sebuah framework javascript yang sering digunakan untuk membuat web. Pada minggu ini, dipelajari cara membuat web menggunakan framework bootstrap serta mengisinya dan mengatur stylingnya</p>
+    <h3 style="color:#073C64">Minggu 5 dan 6: Leaflet JS</h3>
+    <p style="color:grey"><b>Leaflet JS</b> merupakan sebuah WebMap API yang berguna untuk menambahkan peta pada sebuah web. Pada minggu ini, diajarkan cara menambahkan peta dan juga GeoJSON ke dalam web serta melakukan layouting dan menambahkan <i>plugin-plugin bootstrap</i></p>
+    <hr>
+    <h2 align="center">Tempat Favorit di UGM</h2>
+
+    </p>
+    <center>
+        <div id="map"></div>
+      </center>
+   
+    <hr>
+    <h5 align="center" style="color:grey">Selesaikan Pekerjaan</h5>
+    <h3 style="color:#073C64">Masukkan Password untuk menyelesaikan:</h3>
+    <label for="password" >Masukkan Password</label>
+    <input type="password" id="password" >
+    <br>
+    <br>
+    <button onclick="checkPassword()" >Selesaikan</button>
+    <p > Pesan :  </p> 
+    <p id="error" ></p>
+    <br>
+    <br>
+    <br>
+
+    <script>
+        function checkPassword() {
+            const passwordElement = document.getElementById("password");
+            const errorElement = document.getElementById("error");
+
+            const password = passwordElement.value;
+
+            if (password === "Selesai") {
+                errorElement.textContent = "Sandi Benar. Pekerjaan Selesai :)"; 
+                alert("Sandi Benar. Pekerjaan Selesai :)")
+                 
+            } else {
+                errorElement.textContent = "Sandi salah. Lanjutkan mengerjakan";
+                alert("Sandi salah. Lanjutkan mengerjakan")
+            }
+        }
+    </script>
+
+
+    <script>
+      var Icon = L.icon({
+        iconUrl: "https://cdn-icons-png.flaticon.com/512/2107/2107957.png",
+        iconSize: [50, 50],
+        iconAnchor: [20, 50],
+        popupAnchor: [0, 0],
+      });
+
+
+      var perpus = L.marker([-7.7651115, 110.3666396], { icon: Icon }).bindPopup(
+        '<center><img src="https://tpb.tp.ugm.ac.id/wp-content/uploads/2015/10/perpustakaan-ugm.png" width="300px" height="200px" title="Perpustakaan UGM" alt="Perpus"></center><h1>Perpustakaan UGM</h1><p>Perpustakaan UGM merupakan unit penunjang Universitas yang mempunyai tugas pokok mendukung proses pembelajaran, penelitian dan pengabdian kepada masyarakat bagi civitas academica di lingkungan Universitas Gadjah Mada. Di awal berdirinya pada tanggal 1 Maret 1951 Perpustakaan UGM menempati gedung di Jl. Senopati dan saat ini berada di kampus Bulaksumur, Yogyakarta. Selain Perpustakaan Pusat, juga terdapat 18 perpustakaan fakultas, 1 perpustakaan sekolah vokasi, 1 perpustakaan sekolah pascasarjana dan beberapa perpustakaan pusat studi serta jurusan/bagian maupun program studi yang terintegrasi dalam satu sistem informasi perpustakaan.</p><a href="https://lib.ugm.ac.id/sejarah/">Perpustakaan UGM</a>'
+        ),
+
+        wisdom = L.marker([-7.7704536, 110.379451], { icon: Icon }).bindPopup('<center><img src="https://cdn2.tstatic.net/tribunjogjatravel/foto/bank/images/wisdom-park-ugm.jpg" width="300px" height="200px" title="Wisdom Park" alt="Wisdom"></center><h1>Wisdom Park</h1><p>Taman kearifan atau yang biasa dikenal dengan nama Wisdom Park merupakan ruang terbuka hijau milik Universitas Gadjah Mada yang dikelola oleh UGM Residence. Banyak kegiatan yang dapat dilakukan di area dengan luas sekitar 6 hektar ini.</p><a href="https://residence.ugm.ac.id/tentang-wisdompark/">Wisdom Park UGM</a>' 
+        ),
+        SGLC = L.marker([-7.7653553, 110.3697692], { icon: Icon })
+            .bindPopup('<center><img src="https://pbs.twimg.com/media/EQA00a7UcAAjE0s?format=jpg&name=large" width="300px" height="200px" title="SGLC" alt="SGLC"></center><h1>SGLC</h1><p>Gedung SGLC merupakan gedung yang dibangun untuk pembelajaran mahasiswa seluruh teknik. Gedung ini dilengkapi fasilitas yang cukup lengkap seperti kantin, fasilitas olahraga, spot bersantai dan juga spot untuk menugas</p><a href="https://ugrg.ft.ugm.ac.id/sglc-eric/sglc-eric-foe-ugm/">SGLC FT UGM</a>'
+        ),
+        GSP = L.marker([-7.7693523,110.373932], { icon: Icon })
+            .bindPopup('<center><img src="https://residence.ugm.ac.id/wp-content/uploads/sites/1094/2021/01/DSC01400-copy-scaled-700x400.jpg" width="300px" height="200px" title="GSP" alt="GSP"></center><h1>GSP</h1><p>Grha Sabha Pramana (disingkat GSP) adalah gedung auditorium utama milik Universitas Gadjah Mada (UGM) Yogyakarta. Gedung ini digunakan untuk berbagai kegiatan aktivitas akademika UGM, misalnya wisuda, rapat, dan penerimaan mahasiswa baru. Berada di Boulevard dan Gedung Pusat, Grha Sabha Pramana memiliki arsitektur gaya Mataram.</p><a href="https://residence.ugm.ac.id/gsp/">GSP UGM</a>' 
+        ),
+        maskam = L.marker([-7.7733058, 110.3751835], { icon: Icon })
+            .bindPopup('<center><img src="https://awsimages.detik.net.id/community/media/visual/2023/06/08/masjid-kampus-ugm.jpeg?w=1200" width="300px" height="200px" title="Masjid Kampus" alt="Masjid Kampus"></center><h1>Masjid Kampus</h1><p>Masjid Kampus UGM atau yang lebih dikenal dengan nama Maskam UGM merupakah salah satu pusat kegiatan keislaman di lingkungan Universitas Gadjah Mada. Sepanjang tahun, Maskam UGM banyak menyelenggarakan kegiatan, seperti kajian, diskusi, dan seminar, serta dialog publik yang menghadirkan tokoh-tokoh nasional dengan mengangkat tema mulai dari isu keislaman sampai isu nasional.</p><a href="https://masjidkampus.ugm.ac.id/tentang/sejarah/">Masjid Kampus UGM</a>' 
+        );
+        
+
+      var bgn = L.layerGroup([perpus, wisdom, SGLC, GSP, maskam]);
+
+      var osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 20,
+        attribution: "© OpenStreetMap",
+      });
+
+      var osm2 = L.tileLayer("https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}", {
+        maxZoom: 20,
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+      });
+
+      var map = L.map("map", {
+        measureControl: true,
+        center: [-7.764038654325745, 110.3831644682195],
+        zoom: 15,
+        layers: [osm],
+      });
+
+      
+
+      var baseMaps = {
+        Peta: osm,
+        Satelit: osm2,
+      };
+
+      var overlayMaps = {
+        Tempat: bgn,
+      };
+
+      var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+      var baseMaps = {
+        OpenStreetMap: osm,
+        "<span style='color: red'>OpenStreetMap.maps</span>": osm2,
+      };
+      L.easyPrint({
+        title: "My awesome print button",
+        position: "topright",
+        sizeModes: ["A4Portrait", "A4Landscape"],
+      }).addTo(map);
+
+      var graphicScale = L.control
+        .graphicScale({
+          fill: "fill",
+          doubleLine: "true",
+          showSubunits: "true",
+        })
+        .addTo(map);
+
+
+      function cari() {
+        alert("tombol ditekan!");
+        map.locate({ setView: true, maxZoom: 16 });
+
+        function onLocationFound(e) {
+          var radius = e.accuracy / 2;
+
+          L.marker(e.latlng)
+            .addTo(map)
+            .bindPopup("You are within " + radius + " meters from this point")
+            .openPopup();
+
+          L.circle(e.latlng, radius).addTo(map);
+        }
+
+        map.on("locationfound", onLocationFound);
+      }
+      L.Control.geocoder().addTo(map);
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.mi
+n.js"
+      integrity="sha384-
+ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
