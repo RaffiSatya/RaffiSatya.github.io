@@ -39,7 +39,7 @@ window.WORKS = [
   {
     title: "Automated Rooftop Extraction",
     client: "Ministry of ATR/BPN · DG SPPR",
-    meta: "Resolution-adaptive YOLO-seg pipeline with roof regularisation — up to 0.87 IoU (mean 0.74 over 6 test areas) from 5 to 50 cm GSD, cutting manual digitisation by ~80%.",
+    meta: "Resolution-adaptive YOLO-seg pipeline with roof regularisation: up to 0.87 IoU (mean 0.74 over 6 test areas) from 5 to 50 cm GSD, cutting manual digitisation by ~80%.",
     cat: "geoai",
     img: "assets/img/work/roof-extraction.webp"
   },
@@ -47,7 +47,7 @@ window.WORKS = [
     title: "Rooftop Solar Potential & Property Tax Estimation",
     client: "ASEAN Geospatial Challenge 2026",
     award: "1st Place",
-    meta: "From segmented roofs to kWp, energy savings and tax value — one pipeline turning imagery into fiscal and energy insight.",
+    meta: "Segments roofs and existing panels from UAV imagery, then estimates each building's kWp, energy savings and property tax value.",
     cat: "geoai",
     img: "assets/img/work/solar-dashboard.webp",
     featured: true
@@ -55,7 +55,7 @@ window.WORKS = [
   {
     title: "Label-Efficient Road Network Extraction",
     client: "Research & Development · Open Source",
-    meta: "SAM3 + OpenStreetMap pseudo-labels fine-tune a satellite DINOv3 on a 4 GB GPU — no manual labels. 0.94 recall on a held-out Bekasi tile (vs 0.58 zero-shot), with a 966 km connected road graph, road widths and new-road candidates.",
+    meta: "SAM3 + OpenStreetMap pseudo-labels fine-tune a satellite DINOv3 on a 4 GB GPU, with no manual labels. 0.94 recall on a held-out Bekasi tile (vs 0.58 zero-shot), with a 966 km connected road graph, road widths and new-road candidates.",
     cat: "geoai",
     img: "assets/img/work/road-graph.webp",
     repo: "https://github.com/RaffiSatya/road-detection-sam3-dinov3"
@@ -71,14 +71,14 @@ window.WORKS = [
   {
     title: "Cartography, Remote Sensing & Survey Atlas",
     client: "Client & Academic Mapping Projects",
-    meta: "19 map sheets across Indonesia — village and administrative maps, disaster-risk zoning, geology, soil, land use and IKN land transformation, from 1:500 site plans to regional scales.",
+    meta: "19 map sheets across Indonesia: village and administrative maps, disaster-risk zoning, geology, soil, land use and IKN land transformation, from 1:500 site plans to regional scales.",
     cat: "map",
     img: "assets/img/work/map-atlas.webp",
     size: "full",
     noZoom: true
   },
   {
-    title: "Cosmological Axis of Yogyakarta — Heritage Digital Twin",
+    title: "Heritage Digital Twin of the Cosmological Axis of Yogyakarta",
     client: "Cultural Office of Yogyakarta City",
     meta: "3D models, WebGIS and historical narrative of the UNESCO-listed Philosophical Axis, unified in one digital record.",
     cat: "twin",
@@ -89,21 +89,21 @@ window.WORKS = [
   {
     title: "3D Volcano Digital Twin",
     client: "Geo-AI Twinverse",
-    meta: "3D digital twin of Mount Agung and Kelud — multi-epoch UAV terrain, Gaussian Splats and slice comparison to track how each eruption reshapes the crater.",
+    meta: "3D digital twin of Mount Agung and Kelud. Multi-epoch UAV terrain, Gaussian Splats and slice comparison show how each eruption reshapes the crater.",
     cat: "twin",
     img: "assets/img/web/volcano.webp",
     url: "https://new-volcano3d.geotwinverse.ai/"
   },
   {
-    title: "3D Campus Digital Twin — FT UGM",
+    title: "3D Campus Digital Twin, FT UGM",
     client: "Geo-AI Twinverse",
-    meta: "Digital twin of the Faculty of Engineering UGM — explore ERIC, SGLC and DTSL buildings room by room in 3D, straight from the campus map.",
+    meta: "Digital twin of the Faculty of Engineering UGM. Explore the ERIC, SGLC and DTSL buildings room by room in 3D, straight from the campus map.",
     cat: "twin",
     img: "assets/img/web/teknik-3d.webp",
     url: "https://new-3dteknik.geotwinverse.ai/"
   },
   {
-    title: "Simpul Jogja — Real-Time Transit Twin",
+    title: "Simpul Jogja: Real-Time Transit Twin",
     client: "Geo-AI Twinverse",
     meta: "Live public-transport digital twin for Yogyakarta: Trans Jogja, KRL, airport rail, Prameks and long-distance trains on one map.",
     cat: "twin",
@@ -111,9 +111,9 @@ window.WORKS = [
     url: "https://simpul.geotwinverse.ai/"
   },
   {
-    title: "GeoAI Peduli — Disaster Impact Mapping",
+    title: "GeoAI Peduli: Disaster Impact Mapping",
     client: "Geo-AI Twinverse",
-    meta: "Satellite imagery + AI to map disaster impact — Sumatra floods, forest and land cover change, and wildfire smoke, each in its own dashboard.",
+    meta: "Satellite imagery and AI map disaster impact: Sumatra floods, forest and land cover change, and wildfire smoke, each in its own dashboard.",
     cat: "twin",
     img: "assets/img/web/geoaipeduli-fires.webp",
     url: "https://new-geoaipeduli.geotwinverse.ai/"
@@ -175,7 +175,7 @@ window.PUBLICATIONS = [
 */
 window.IP = [
   {
-    title: "NARAGA — Cloud Platform Integrating GeoAI, 3D Modelling and Digital Twin for National Geospatial Analysis",
+    title: "NARAGA: Cloud Platform Integrating GeoAI, 3D Modelling and Digital Twin for National Geospatial Analysis",
     original: "Platform Integrasi GeoAI, 3D Modeling, dan Digital Twin untuk Analisis Geospasial Nasional berbasis Cloud Processing: NARAGA",
     type: "Copyright · Computer Program",
     number: "001305988",

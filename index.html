@@ -1,171 +1,199 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Raffi Satya Nugraha — GeoAI Engineer</title>
-  <meta name="description" content="Raffi Satya Nugraha — GeoAI Engineer & Geodetic Engineer. Deep learning for satellite imagery, WebGIS, and spatial data pipelines.">
-  <meta property="og:title" content="Raffi Satya Nugraha — GeoAI Engineer">
-  <meta property="og:description" content="Reading the Earth, one pixel at a time.">
+  <title>Raffi Satya Nugraha · GeoAI Engineer</title>
+  <meta name="description" content="Raffi Satya Nugraha, GeoAI and geodetic engineer. Deep learning for satellite and drone imagery, digital twins and WebGIS.">
+  <meta property="og:title" content="Raffi Satya Nugraha · GeoAI Engineer">
+  <meta property="og:description" content="GeoAI models, digital twins and maps from satellite and drone imagery.">
   <meta property="og:image" content="assets/img/work/solar-dashboard.webp">
-  <meta name="theme-color" content="#F6F7F9">
-  <link rel="icon" href="assets/img/favicon.png">
-  <link rel="apple-touch-icon" href="assets/img/favicon.png">
+  <meta name="theme-color" content="#F5F6F8">
+  <link rel="icon" href="assets/img/favicon-r.png" type="image/png" sizes="512x512">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon-r.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=28">
+  <link rel="stylesheet" href="assets/css/style.css?v=38">
 </head>
 <body>
-
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="progress" aria-hidden="true"><span></span></div>
 
   <!-- ================= HEADER ================= -->
   <header class="topbar">
-    <a href="#top" class="mono-mark" aria-label="Kembali ke atas">R<em>s</em>N</a>
-    <div class="topbar__meta mono">
-      <span id="clock">--:--:--</span> WIB
-      <span class="sep">/</span>
-      7.7590° S, 110.3780° E
-    </div>
-    <nav class="nav" id="nav">
-      <a href="#about">About</a>
+    <a href="#main" class="brand" aria-label="Raffi Satya Nugraha, back to top">
+      <img src="assets/img/profile.webp" alt="" width="36" height="36">
+      <span>Raffi Satya <b>Nugraha</b></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
       <a href="#work">Work</a>
+      <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav__cta">Contact</a>
     </nav>
-    <a href="#contact" class="status mono"><i></i>Available</a>
-    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    <button class="burger" id="burger" aria-label="Open menu" aria-controls="nav" aria-expanded="false"><span></span><span></span></button>
   </header>
 
-  <main id="top">
+  <main id="main">
 
     <!-- ================= HERO ================= -->
     <section class="hero" id="hero">
-      <canvas class="hero__contours" id="contours" aria-hidden="true"></canvas>
-      <div class="crosshair mono" id="crosshair" aria-hidden="true">
-        <span class="crosshair__h"></span><span class="crosshair__v"></span>
-        <b id="coord">7.75900° S · 110.37800° E</b>
-      </div>
-
-      <div class="hero__grid">
-        <h1 class="hero__title">
-          <span class="line"><span>Raffi Satya</span></span>
-          <span class="line"><span><em>Nugraha</em><sup class="mono">(23)</sup></span></span>
+      <div class="hero__text">
+        <h1 class="hero__title" aria-label="GeoAI engineer turning imagery into decisions.">
+          <span class="line" aria-hidden="true"><span>GeoAI engineer</span></span>
+          <span class="line" aria-hidden="true"><span>turning <span class="rotator" id="rotator"><em class="is-on">imagery</em><em>drone scans</em><em>point clouds</em><em>Sentinel-2</em></span></span></span>
+          <span class="line" aria-hidden="true"><span>into decisions.</span></span>
         </h1>
+        <p class="lede">
+          I'm Raffi. I train models that map land cover, rooftops and roads from satellite and drone imagery, then build the 3D web platforms that put the results to work.
+        </p>
+        <div class="hero__ctas">
+          <a href="#work" class="btn btn--ink">See Selected Work <span aria-hidden="true">↓</span></a>
+          <a href="#contact" class="btn btn--line">Get in Touch</a>
+        </div>
+        <dl class="hero__facts">
+          <div><dt>Now</dt><dd>AI Research Engineer, Geo-AI Twinverse</dd></div>
+          <div><dt>Study</dt><dd>M.Eng Geomatics, UGM</dd></div>
+          <div><dt>Award</dt><dd>1st, ASEAN Geospatial Challenge 2026</dd></div>
+        </dl>
+      </div>
 
-        <figure class="hero__portrait reveal">
-          <div class="portrait__frame">
-            <svg class="portrait__topo" viewBox="0 0 200 240" aria-hidden="true">
-              <g fill="none" stroke="currentColor" stroke-width=".6">
-                <path d="M100 30c45 0 80 35 80 85s-30 105-80 105S20 175 20 115 55 30 100 30z"/>
-                <path d="M100 50c35 0 62 28 62 68s-24 85-62 85-62-40-62-85 27-68 62-68z"/>
-                <path d="M100 70c26 0 45 22 45 50s-17 64-45 64-45-30-45-64 19-50 45-50z"/>
-                <path d="M100 92c15 0 27 13 27 30s-10 40-27 40-27-18-27-40 12-30 27-30z"/>
-              </g>
-            </svg>
-            <img src="assets/img/profile.webp" alt="Foto Raffi Satya Nugraha" width="812" height="984">
-          </div>
-          <figcaption class="mono">📍 Yogyakarta, ID</figcaption>
+      <div class="hero__visual" id="heroVisual">
+        <svg class="graticule" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g class="graticule__grid">
+            <path d="M0 100H600M0 200H600M0 300H600M0 400H600M0 500H600M100 0V600M200 0V600M300 0V600M400 0V600M500 0V600"/>
+          </g>
+          <g class="graticule__labels">
+            <text x="104" y="16">110°20′E</text><text x="304" y="16">110°22′E</text><text x="504" y="16">110°24′E</text>
+            <text x="4" y="96">7°44′S</text><text x="4" y="296">7°46′S</text><text x="4" y="496">7°48′S</text>
+          </g>
+          <circle class="graticule__aoi" cx="300" cy="300" r="250"/>
+          <g class="graticule__north" transform="translate(560 560)">
+            <path d="M0 -18 L7 6 L0 1 L-7 6 Z"/><text x="0" y="22">N</text>
+          </g>
+        </svg>
+        <a class="hv-back hv-back--vale" href="#work" aria-label="See the PT Vale Indonesia land cover and pepper plant detection project">
+          <img src="assets/img/work/vale-pepper.webp" alt="" width="929" height="619">
+        </a>
+        <a class="hv-back hv-back--sr" href="#work" aria-label="See the Sentinel-2 super-resolution project">
+          <img src="assets/img/work/super-resolution.webp" alt="" width="1600" height="1600">
+        </a>
+        <figure class="hero__photo">
+          <img src="assets/img/profile.webp" alt="Portrait of Raffi Satya Nugraha" width="812" height="984" fetchpriority="high">
         </figure>
-
-        <div class="hero__lede reveal">
-          <p class="lede">
-            GeoAI Engineer who teaches machines to <em>read the Earth</em> — turning satellite &amp; UAV pixels into maps that matter.
-          </p>
-          <div class="hero__ctas">
-            <a href="#work" class="btn btn--ink">See selected work <span>↓</span></a>
-            <a href="#contact" class="btn btn--line">Get in touch</a>
-          </div>
-        </div>
-
-        <ul class="hero__index mono reveal">
-          <li><span>Role</span>AI Research Engineer, Geo-AI Twinverse</li>
-          <li><span>Study</span>M.Eng Geomatics, UGM — GPA 3.79</li>
-          <li><span>Focus</span>GeoAI · Digital Twin · WebGIS</li>
-          <li><span>Base</span>Sleman, D.I. Yogyakarta</li>
-        </ul>
-      </div>
-
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee__track">
-          <span>GeoAI Engineer</span><i>✦</i><span>Remote Sensing Analyst</span><i>✦</i><span>Spatial Programmer</span><i>✦</i><span>GIS Engineer</span><i>✦</i><span>WebGIS Developer</span><i>✦</i><span>Digital Twin Developer</span><i>✦</i><span>3D Modeler</span><i>✦</i>
-          <span>GeoAI Engineer</span><i>✦</i><span>Remote Sensing Analyst</span><i>✦</i><span>Spatial Programmer</span><i>✦</i><span>GIS Engineer</span><i>✦</i><span>WebGIS Developer</span><i>✦</i><span>Digital Twin Developer</span><i>✦</i><span>3D Modeler</span><i>✦</i>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= ABOUT ================= -->
-    <section class="section about" id="about">
-      <header class="sec-head reveal">
-        <span class="sec-num mono">01</span>
-        <h2>About</h2>
-        <span class="sec-rule"></span>
-      </header>
-
-      <div class="about__grid">
-        <p class="about__big reveal">
-          I'm a geodetic engineer working where <em>AI meets geospatial</em>. I turn satellite, drone and survey data into maps, models and digital twins that help organisations understand places and make better decisions — from the first data capture to the platform people actually use.
-        </p>
-
-        <aside class="legend reveal">
-          <h3 class="mono">Legend</h3>
-          <dl>
-            <dt>Born</dt><dd>12 April 2003</dd>
-            <dt>City</dt><dd>Sleman, Yogyakarta</dd>
-            <dt>Email</dt><dd><a href="mailto:raffisatyan@gmail.com">raffisatyan@gmail.com</a></dd>
-            <dt>Phone</dt><dd>+62 853-2672-9247</dd>
-            <dt>Freelance</dt><dd><span class="dot"></span>Available</dd>
-          </dl>
-        </aside>
-
-        <p class="about__side reveal">
-          Off the clock I draw, design and edit video — often for competitions. Film and music are a constant companion, and I keep moving with football, badminton and running. That visual habit is why my maps tend to look the way they do.
-        </p>
-      </div>
-
-      <div class="stats">
-        <div class="stat reveal"><b><span data-count="3">0</span>+</b><span class="mono">Years of experience</span></div>
-        <div class="stat reveal"><b><span data-count="30">0</span>+</b><span class="mono">Projects completed</span></div>
-        <div class="stat reveal"><b><span data-count="10">0</span>+</b><span class="mono">Organisations &amp; clients</span></div>
-        <div class="stat reveal"><b><span data-count="30">0</span>+</b><span class="mono">Tools &amp; technologies</span></div>
       </div>
     </section>
 
     <!-- ================= WORK ================= -->
     <section class="section work" id="work">
-      <header class="sec-head reveal">
-        <span class="sec-num mono">02</span>
-        <h2>Selected <em>Work</em></h2>
-        <span class="sec-rule"></span>
+      <header class="sec-head">
+        <div>
+          <p class="sec-label">Selected Work</p>
+          <h2>Models, platforms <em>&amp; maps</em></h2>
+        </div>
+        <p class="sec-intro">GeoAI models built for clients, and the digital twins and web platforms that put them in people's hands.</p>
       </header>
 
-      <p class="sec-intro reveal">GeoAI models built for clients, and the digital twins and web platforms that put them in people's hands.</p>
-
-      <div class="chips reveal" role="group" aria-label="Filter proyek">
-        <button class="chip is-on" data-filter="all" aria-pressed="true">All <sup id="count-all"></sup></button>
-        <button class="chip" data-filter="geoai" aria-pressed="false">GeoAI <sup id="count-geoai"></sup></button>
-        <button class="chip" data-filter="twin" aria-pressed="false">Digital Twin &amp; Web <sup id="count-twin"></sup></button>
-        <button class="chip" data-filter="map" aria-pressed="false">Mapping &amp; Survey <sup id="count-map"></sup></button>
+      <div class="chips" role="group" aria-label="Filter projects">
+        <button class="chip is-on" data-filter="all" aria-pressed="true">All <sup></sup></button>
+        <button class="chip" data-filter="geoai" aria-pressed="false">GeoAI <sup></sup></button>
+        <button class="chip" data-filter="twin" aria-pressed="false">Digital Twin &amp; Web <sup></sup></button>
+        <button class="chip" data-filter="map" aria-pressed="false">Mapping &amp; Survey <sup></sup></button>
       </div>
 
       <ol class="works" id="works"></ol>
     </section>
 
+    <!-- ================= ABOUT ================= -->
+    <section class="section about" id="about">
+      <header class="sec-head">
+        <div>
+          <p class="sec-label">About</p>
+          <h2>Geodesy first, <em>AI second</em></h2>
+        </div>
+      </header>
+
+      <div class="about__grid">
+        <div class="about__story card">
+          <p class="about__big">
+            I'm a geodetic engineer working where AI meets geospatial. I turn satellite, drone and survey data into maps, models and digital twins that help organisations understand places and make better decisions, from the first drone flight to the platform people actually use.
+          </p>
+          <p class="about__side">
+            Off the clock I draw, design and edit video, often for competitions. That visual habit is why my maps tend to look the way they do. I keep moving with football, badminton and running.
+          </p>
+        </div>
+
+        <dl class="about__info card">
+          <div><dt>Based in</dt><dd>Sleman, Yogyakarta</dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:raffisatyan@gmail.com">raffisatyan@gmail.com</a></dd></div>
+          <div><dt>Phone</dt><dd>+62 853-2672-9247</dd></div>
+          <div><dt>Freelance</dt><dd><span class="dot" aria-hidden="true"></span>Available</dd></div>
+        </dl>
+
+        <div class="stats">
+          <div class="stat card"><b><span data-count="3">3</span>+</b><span>Years of experience</span></div>
+          <div class="stat card"><b><span data-count="30">30</span>+</b><span>Projects completed</span></div>
+          <div class="stat card"><b><span data-count="10">10</span>+</b><span>Organisations &amp; clients</span></div>
+          <div class="stat card"><b><span data-count="30">30</span>+</b><span>Tools &amp; technologies</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section skills" id="skills">
+      <header class="sec-head">
+        <div>
+          <p class="sec-label">What I Do</p>
+          <h2>Four skill sets, <em>one pipeline</em></h2>
+        </div>
+        <p class="sec-intro">From capturing the data to shipping the platform, each stage feeds the next.</p>
+      </header>
+
+      <ol class="skill-grid">
+        <li class="skill card">
+          <span class="skill__num">01</span>
+          <h3>Survey &amp; Remote Sensing</h3>
+          <p>UAV photogrammetry, GNSS and Sentinel-2 processing: the ground truth behind every model.</p>
+          <ul class="tags"><li>Sentinel-2</li><li>Google Earth Engine</li><li>UAV photogrammetry</li><li>Agisoft Metashape / Pix4D</li><li>LiDAR &amp; point clouds</li><li>STAC</li></ul>
+        </li>
+        <li class="skill card">
+          <span class="skill__num">02</span>
+          <h3>GeoAI &amp; Deep Learning</h3>
+          <p>Segmentation, detection and super-resolution models trained and evaluated on real survey data.</p>
+          <ul class="tags"><li>Python</li><li>PyTorch</li><li>scikit-learn</li><li>NumPy / Pandas</li><li>Segment Anything (SAM / SAM3)</li><li>YOLO</li><li>U-Net</li><li>SegFormer</li><li>DINOv3</li><li>ESRGAN</li><li>Diffusion models</li><li>LLM integration (Gemini API)</li></ul>
+        </li>
+        <li class="skill card">
+          <span class="skill__num">03</span>
+          <h3>GIS &amp; Spatial Data</h3>
+          <p>Raster and vector pipelines, spatial databases and cartography that run without babysitting.</p>
+          <ul class="tags"><li>QGIS</li><li>ArcGIS Pro</li><li>GeoPandas</li><li>GDAL / Rasterio</li><li>PostgreSQL / PostGIS</li><li>FastAPI</li></ul>
+        </li>
+        <li class="skill card">
+          <span class="skill__num">04</span>
+          <h3>3D &amp; Digital Twin</h3>
+          <p>LoD 3 buildings, terrain and live data streamed into browser-based twins.</p>
+          <ul class="tags"><li>CesiumJS</li><li>3D Tiles</li><li>Gaussian Splatting</li><li>Blender</li><li>MapLibre GL</li><li>Mapbox GL</li><li>Leaflet</li><li>HTML · CSS · JavaScript</li><li>Git &amp; GitHub</li></ul>
+        </li>
+      </ol>
+    </section>
+
     <!-- ================= EXPERIENCE ================= -->
     <section class="section experience" id="experience">
-      <header class="sec-head reveal">
-        <span class="sec-num mono">03</span>
-        <h2>Experience</h2>
-        <span class="sec-rule"></span>
+      <header class="sec-head">
+        <div>
+          <p class="sec-label">Experience</p>
+          <h2>Where I've <em>worked</em></h2>
+        </div>
       </header>
 
       <div class="ledger">
-        <details class="row reveal" open>
+        <details class="row" open>
           <summary>
-            <span class="mono when">Aug 2025 — Now</span>
+            <span class="when">Aug 2025 – Now</span>
             <span class="what">AI Research Engineer</span>
             <span class="where">Geo-AI Twinverse</span>
             <span class="toggle" aria-hidden="true"></span>
@@ -174,13 +202,13 @@
             <li>CNN land cover classification on Sentinel-2 &amp; UAV imagery (~500 tiles, &gt;15 km²) at ~87% overall accuracy for PT Vale Indonesia.</li>
             <li>SAM-YOLO building footprint segmentation (up to 0.87 IoU), cutting manual digitisation by ~80% for Badan Pertanahan Nasional.</li>
             <li>ESRGAN / diffusion super-resolution on 10 m imagery, improving classification consistency by ~10–20%.</li>
-            <li>End-to-end GeoAI pipelines — preprocessing, tiling, training, inference, evaluation — shipped with a 14-person team.</li>
+            <li>End-to-end GeoAI pipelines (preprocessing, tiling, training, inference, evaluation) shipped with a 14-person team.</li>
           </ul>
         </details>
 
-        <details class="row reveal">
+        <details class="row">
           <summary>
-            <span class="mono when">Jul 2025</span>
+            <span class="when">Jul 2025</span>
             <span class="what">Training Assistant</span>
             <span class="where">PT. KAI Indonesia</span>
             <span class="toggle" aria-hidden="true"></span>
@@ -191,9 +219,9 @@
           </ul>
         </details>
 
-        <details class="row reveal">
+        <details class="row">
           <summary>
-            <span class="mono when">Jan — Feb 2025</span>
+            <span class="when">Jan – Feb 2025</span>
             <span class="what">Intern Staff</span>
             <span class="where">Badan Informasi Geospasial</span>
             <span class="toggle" aria-hidden="true"></span>
@@ -205,9 +233,9 @@
           </ul>
         </details>
 
-        <details class="row reveal">
+        <details class="row">
           <summary>
-            <span class="mono when">Jan — Feb 2025</span>
+            <span class="when">Jan – Feb 2025</span>
             <span class="what">GIS Engineer</span>
             <span class="where">PT. Waindo Spectra</span>
             <span class="toggle" aria-hidden="true"></span>
@@ -218,9 +246,9 @@
           </ul>
         </details>
 
-        <details class="row reveal">
+        <details class="row">
           <summary>
-            <span class="mono when">2023 — 2025</span>
+            <span class="when">2023 – 2025</span>
             <span class="what">Teaching Assistant</span>
             <span class="where">Universitas Gadjah Mada</span>
             <span class="toggle" aria-hidden="true"></span>
@@ -231,9 +259,9 @@
           </ul>
         </details>
 
-        <details class="row reveal">
+        <details class="row">
           <summary>
-            <span class="mono when">Jul — Sep 2023</span>
+            <span class="when">Jul – Sep 2023</span>
             <span class="what">Intern Staff</span>
             <span class="where">Badan Pertanahan Nasional</span>
             <span class="toggle" aria-hidden="true"></span>
@@ -246,34 +274,34 @@
       </div>
 
       <div class="exp__split">
-        <div class="reveal">
-          <h3 class="mini mono">Education</h3>
+        <div class="card">
+          <h3 class="mini">Education</h3>
           <div class="edu">
-            <p class="mono when">2024 — 2026</p>
+            <p class="when">2024 – 2026</p>
             <h4>Master of Geomatics Engineering</h4>
             <p>Universitas Gadjah Mada · GPA 3.79 / 4.00</p>
           </div>
           <div class="edu">
-            <p class="mono when">2021 — 2025</p>
+            <p class="when">2021 – 2025</p>
             <h4>Bachelor of Geodesy Engineering</h4>
             <p>Universitas Gadjah Mada · GPA 3.76 / 4.00</p>
           </div>
         </div>
 
-        <div class="reveal">
-          <h3 class="mini mono">Awards</h3>
+        <div class="card">
+          <h3 class="mini">Awards</h3>
           <div class="award">
             <span class="award__rank">1<sup>st</sup></span>
-            <div><h4>ASEAN Geospatial Challenge</h4><p class="mono">2026 · International</p></div>
+            <div><h4>ASEAN Geospatial Challenge</h4><p>2026 · International</p></div>
           </div>
           <div class="award">
             <span class="award__rank">1<sup>st</sup></span>
-            <div><h4>National Scientific Paper Competition</h4><p class="mono">2024 · National</p></div>
+            <div><h4>National Scientific Paper Competition</h4><p>2024 · National</p></div>
           </div>
         </div>
 
-        <div class="reveal">
-          <h3 class="mini mono">Organisation</h3>
+        <div class="card">
+          <h3 class="mini">Organisation</h3>
           <ul class="orgs">
             <li><b>Head of Design Division</b><span>KMTG UGM · 2023–24 · led 8 designers, 30+ assets</span></li>
             <li><b>Staff of Internal Collaboration</b><span>BEM KM UGM · 2023 · 20+ visual contents</span></li>
@@ -285,77 +313,54 @@
 
     <!-- ================= PUBLICATIONS & IP ================= -->
     <section class="section pubs" id="publications">
-      <header class="sec-head reveal">
-        <span class="sec-num mono">04</span>
-        <h2>Publications <em>&amp; IP</em></h2>
-        <span class="sec-rule"></span>
+      <header class="sec-head">
+        <div>
+          <p class="sec-label">Publications &amp; IP</p>
+          <h2>Papers <em>&amp; registered software</em></h2>
+        </div>
       </header>
       <div class="pubs__groups" id="pubs"></div>
     </section>
 
-    <!-- ================= CAPABILITIES ================= -->
-    <section class="section caps" id="capabilities">
-      <header class="sec-head reveal">
-        <span class="sec-num mono">05</span>
-        <h2>What I <em>do</em></h2>
-        <span class="sec-rule"></span>
-      </header>
-
-      <div class="caps__grid">
-        <article class="cap reveal"><span class="mono">01</span><h3>GeoAI &amp; Deep Learning</h3><p>U-Net, SAM-YOLO and ESRGAN models for land cover, building extraction and super-resolution.</p></article>
-        <article class="cap reveal"><span class="mono">02</span><h3>Remote Sensing</h3><p>Multispectral Sentinel-2 and UAV processing for land cover and change detection.</p></article>
-        <article class="cap reveal"><span class="mono">03</span><h3>Digital Twin &amp; WebGIS</h3><p>3D web platforms with Cesium, MapLibre and Mapbox that make spatial data explorable.</p></article>
-        <article class="cap reveal"><span class="mono">04</span><h3>Geospatial Pipelines</h3><p>Scalable raster workflows and PostGIS databases that run without babysitting.</p></article>
-        <article class="cap reveal"><span class="mono">05</span><h3>3D Spatial Modelling</h3><p>LoD 3 city, terrain and building models built from real-world geospatial data.</p></article>
-        <article class="cap reveal"><span class="mono">06</span><h3>Survey &amp; Mapping</h3><p>UAV photogrammetry, GNSS and cartographic production as the ground truth behind the models.</p></article>
-      </div>
-
-      <div class="toolbelt reveal" aria-label="Tools">
-        <div class="toolbelt__row"><h3 class="mini mono">AI &amp; Deep Learning</h3><div class="toolbelt__chips"><span>Python</span><span>PyTorch</span><span>scikit-learn</span><span>NumPy / Pandas</span><span>Segment Anything (SAM / SAM3)</span><span>YOLO</span><span>U-Net</span><span>SegFormer</span><span>DINOv3</span><span>ESRGAN</span><span>Diffusion models</span><span>LLM integration (Gemini API)</span></div></div>
-        <div class="toolbelt__row"><h3 class="mini mono">Remote Sensing &amp; GIS</h3><div class="toolbelt__chips"><span>Sentinel-2</span><span>Google Earth Engine</span><span>QGIS</span><span>ArcGIS Pro</span><span>GeoPandas</span><span>GDAL / Rasterio</span><span>STAC</span><span>PostgreSQL / PostGIS</span><span>UAV photogrammetry</span><span>Agisoft Metashape / Pix4D</span><span>LiDAR &amp; point clouds</span></div></div>
-        <div class="toolbelt__row"><h3 class="mini mono">3D &amp; Digital Twin</h3><div class="toolbelt__chips"><span>CesiumJS</span><span>3D Tiles</span><span>Gaussian Splatting</span><span>Blender</span><span>MapLibre GL</span><span>Mapbox GL</span><span>Leaflet</span></div></div>
-        <div class="toolbelt__row"><h3 class="mini mono">Engineering</h3><div class="toolbelt__chips"><span>FastAPI</span><span>HTML · CSS · JavaScript</span><span>Git &amp; GitHub</span></div></div>
-      </div>
-    </section>
-
     <!-- ================= CONTACT ================= -->
     <section class="section contact" id="contact">
-      <p class="eyebrow mono reveal">06 — Contact</p>
-      <h2 class="contact__big reveal">Let's map<br><em>something</em> together.</h2>
-
-      <div class="contact__row reveal">
-        <button class="email" id="copyEmail" data-email="raffisatyan@gmail.com">
-          <span>raffisatyan@gmail.com</span>
-          <i class="mono" id="copyHint">Click to copy</i>
-        </button>
-        <ul class="socials">
-          <li><a href="https://www.linkedin.com/in/raffi-satya-nugraha/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-          <li><a href="https://github.com/RaffiSatya" target="_blank" rel="noopener">GitHub ↗</a></li>
-          <li><a href="https://wa.me/6285326729247" target="_blank" rel="noopener">WhatsApp ↗</a></li>
-          <li><a href="https://www.instagram.com/raffisatyan/" target="_blank" rel="noopener">Instagram ↗</a></li>
-        </ul>
+      <div class="contact__panel">
+        <p class="sec-label">Contact</p>
+        <h2 class="contact__big">Let's map<br><em>something</em> together.</h2>
+        <div class="contact__row">
+          <button class="email" id="copyEmail" data-email="raffisatyan@gmail.com">
+            <span>raffisatyan@gmail.com</span>
+            <i id="copyHint" aria-live="polite">Click to copy</i>
+          </button>
+          <ul class="socials">
+            <li><a href="https://www.linkedin.com/in/raffi-satya-nugraha/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/RaffiSatya" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://wa.me/6285326729247" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.instagram.com/raffisatyan/" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer mono">
+  <footer class="footer">
     <span>© <span id="year">2026</span> Raffi Satya Nugraha</span>
-    <span>Pogung Dalangan, Sleman — 7.7590° S, 110.3780° E</span>
-    <a href="#top">Back to top ↑</a>
+    <span>Pogung Dalangan, Sleman · <span id="clock">--:--</span> WIB</span>
+    <a href="#main">Back to top <span aria-hidden="true">↑</span></a>
   </footer>
 
   <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau gambar" hidden>
-    <button class="lightbox__close mono" aria-label="Tutup">Close ✕</button>
-    <button class="lightbox__nav prev" aria-label="Sebelumnya">←</button>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <button class="lightbox__close">Close <span aria-hidden="true">✕</span></button>
+    <button class="lightbox__nav prev" aria-label="Previous image">←</button>
     <figure>
       <img alt="">
-      <figcaption class="mono"></figcaption>
+      <figcaption></figcaption>
     </figure>
-    <button class="lightbox__nav next" aria-label="Berikutnya">→</button>
+    <button class="lightbox__nav next" aria-label="Next image">→</button>
   </div>
 
-  <script src="assets/js/data.js?v=28"></script>
-  <script src="assets/js/app.js?v=28"></script>
+  <script src="assets/js/data.js?v=38"></script>
+  <script src="assets/js/app.js?v=38"></script>
 </body>
 </html>
